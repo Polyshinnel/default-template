@@ -69,7 +69,7 @@ if(isset($_SESSION['user'])){
     
 
 }else{
-    if(isset($_GET['controller']) && ($_GET['controller'] == "Login" || $_GET['controller']=="Register" || $_GET['controller']=="ConfirmCode" || $_GET['controller']=="Restore")){
+    if(isset($_GET['controller']) && ($_GET['controller'] == "Login" || $_GET['controller']=="Register" || $_GET['controller']=="ConfirmCode" || $_GET['controller']=="Restore" || $_GET['controller']=="RestorePass")){
         $controllerName = $_GET['controller'];
         $actionName = 'index';
         $userData = NULL;
