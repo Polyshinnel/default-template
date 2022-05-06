@@ -1,30 +1,31 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2022-05-07 00:24:15
-         compiled from "./views/default\login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:46396347261f216e62f0cf4-52635628%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2022-05-06 23:46:11
+         compiled from "./views/default\restore-pass.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:13779248216272d377765aa9-84662442%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '67c871379397418cda36744784be48ee315c0b4e' => 
+    '17c9e6957e5418d57c79b82bf96ca78204c416d3' => 
     array (
-      0 => './views/default\\login.tpl',
-      1 => 1651872157,
+      0 => './views/default\\restore-pass.tpl',
+      1 => 1651869485,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '46396347261f216e62f0cf4-52635628',
+  'nocache_hash' => '13779248216272d377765aa9-84662442',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_61f216e632959',
+  'unifunc' => 'content_6272d377786af',
   'variables' => 
   array (
     'templateWebPath' => 0,
     'pageTitle' => 0,
+    'pageText' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_61f216e632959')) {function content_61f216e632959($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_6272d377786af')) {function content_6272d377786af($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,30 +44,31 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="service-form__title">
                 <img src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
 /img/logo-blue.png" alt="">
-                <h1>Авторизация</h1>
-                <p>Введите ваш логин и пароль</p>
+                <h1>Смена пароля</h1>
+                <p>Введите новый пароль</p>
             </div>
 
             <div class="service-form__inputs">
                 <div class="input-block">
                     <div class="input-block__title">
-                        <label for="login">Логин</label>
+                        <label for="restore-pass">Новый пароль</label>
                     </div>
-                    <input type="text" id="login" placeholder="Логин">
+                    <input type="text" id="restore-pass" placeholder="Новый пароль">
                 </div>
+
                 <div class="input-block">
                     <div class="input-block__title">
-                        <label for="password">Пароль</label>
-                        <a href="/?controller=Restore">Забыли пароль?</a>
+                        <label for="restore-pass-confirm">Повторите пароль</label>
                     </div>
-                    <input type="password" id="password" placeholder="Пароль">
-                    <img id="show-pass" src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
-/img/show.svg" alt="">
+                    <input type="text" id="restore-pass-confirm" placeholder="Повторите пароль">
                 </div>
+                
             </div>
 
-            <button id="loginBtn" class="blue-btn blue-btn_serv">Авторизоваться</button>
-            <a href="/?controller=Register" class="service-form__link">Регистрация</a>
+            <p class="service-form__text"><?php echo $_smarty_tpl->tpl_vars['pageText']->value;?>
+</p>
+
+            <button id="change-pass" class="blue-btn blue-btn_serv">Сменить пароль</button>
         </div>
     </div>
 

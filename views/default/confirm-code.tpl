@@ -28,9 +28,28 @@
             </div>
 
             <p class="service-form__text">{$pageText}</p>
+            <p class="service-form__text service-form__text_mod">Отправить повторно код через: <span id="timer-coutdown">59 c</span></p>
 
-            <button class="blue-btn blue-btn_serv">Подтвердить</button>
+            <button id="confirmBtn" class="blue-btn blue-btn_serv">Подтвердить</button>
+            <a href="/" class="service-form__link">Авторизоваться</a>
         </div>
     </div>
+
+    <div class="fancy-box">
+        <div class="fancy-box__wrapper">
+            <div class="fanncy-message">
+                <img src="{$templateWebPath}/img/sucess.svg" alt="">
+                <p>Регистрация прошла успешно</p>
+            </div>
+        </div>
+    </div>
+    <script src="{$templateWebPath}/vendor/inputmask/inputmask.min.js"></script>
+    <script>
+        let inputMask = new Inputmask("9-9-9-9");
+        let elem = document.querySelector('#confirm-code');
+        inputMask.mask(elem);
+    </script>
+    <script type="module" src="{$templateWebPath}/js/common.js"></script>
+    <script type="module" src="{$templateWebPath}/js/login.js"></script>
 </body>
 </html>

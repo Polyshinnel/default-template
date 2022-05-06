@@ -36,8 +36,20 @@
 
             <p class="service-form__text">{$pageText}</p>
 
-            <button class="blue-btn blue-btn_serv">Сменить пароль</button>
+            <button id="change-pass" class="blue-btn blue-btn_serv">Сменить пароль</button>
         </div>
     </div>
+
+    <div class="fancy-box">
+        <div class="fancy-box__wrapper">
+            <div class="fanncy-message">
+                <img src="{$templateWebPath}/img/sucess.svg" alt="">
+                <p>Регистрация прошла успешно</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="{$templateWebPath}/js/common.js"></script>
+    <script type="module" src="{$templateWebPath}/js/login.js"></script>
 </body>
 </html>

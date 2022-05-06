@@ -4,6 +4,7 @@
 define('PathPrefix','./controllers/');
 define('PathPostfix','Controller.php');
 
+
 //Настройки smarty
 
 //Используемый шаблон

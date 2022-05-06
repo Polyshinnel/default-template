@@ -13,23 +13,15 @@
         <div class="service-form">
             <div class="service-form__title">
                 <img src="{$templateWebPath}/img/logo-blue.png" alt="">
-                <h1>Восстановление пароля</h1>
-                <p>Введите почту на которую зарегистрирован ваш аккаунт в личном кабинете</p>
+                <h1>Ожидание авторизации</h1>
+                <p>Ожидайте пока вашу авторизацию одобрит отдел по работе с диллерами</p>
             </div>
 
-            <div class="service-form__inputs">
-                <div class="input-block">
-                    <div class="input-block__title">
-                        <label for="restore-mail">Ваша почта</label>
-                    </div>
-                    <input type="text" id="restore-mail" placeholder="Ваша почта">
-                </div>
-                
-            </div>
+            <img class="await-page" src="{$templateWebPath}/img/await.svg" alt="">
 
-            <p class="service-form__text">{$pageText}</p>
+            <p class="service-form__text">{$awaitText}</p>
 
-            <button id="send-restore" class="blue-btn blue-btn_serv">Подтвердить</button>
+            <a href="/" class="service-form__link"><button id="loginBtn" class="blue-btn blue-btn_serv">Понятно</button></a>
         </div>
     </div>
 

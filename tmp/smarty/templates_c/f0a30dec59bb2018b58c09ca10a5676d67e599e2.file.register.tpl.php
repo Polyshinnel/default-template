@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2022-01-27 07:55:04
+<?php /* Smarty version Smarty-3.1.6, created on 2022-05-05 19:38:38
          compiled from "./views/default\register.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:198902799361f218f3504260-19355104%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f0a30dec59bb2018b58c09ca10a5676d67e599e2' => 
     array (
       0 => './views/default\\register.tpl',
-      1 => 1643259299,
+      1 => 1651768704,
       2 => 'file',
     ),
   ),
@@ -25,65 +25,100 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_61f218f353bd2')) {function content_61f218f353bd2($_smarty_tpl) {?><!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
 /css/style.css">
+    <link rel="shortcut icon" href="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
+/img/favicon.ico" type="image/x-icon">
     <title><?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>
 </title>
 </head>
 <body>
-    <div class="form-container">
+    <div class="service-form__wrapper">
         <div class="service-form">
-            <div class="service-form__logo">
-                <img src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
-/img/form-logo.png" alt="">
-            </div>
             <div class="service-form__title">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
+/img/logo-blue.png" alt="">
                 <h1>Регистрация</h1>
                 <p>Введите ваши учетные данные</p>
             </div>
 
-            <div class="service-form__input-block">
-                <div class="service-form__input-unit">
-                    <label for="username">Ваше имя</label>
-                    <input type="text" id="username" placeholder="Ваше имя">
+            <div class="service-form__inputs">
+                <div class="input-block">
+                    <div class="input-block__title">
+                        <label for="user-name">Ваше имя</label>
+                    </div>
+                    <input type="text" id="user-name" placeholder="Ваше имя и фамилия">
                 </div>
-                <div class="service-form__input-unit">
-                    <label for="mail">Email</label>
-                    <input type="text" id="mail" placeholder="Email">
+
+                <div class="input-block">
+                    <div class="input-block__title">
+                        <label for="user-email">Email</label>
+                    </div>
+                    <input type="text" id="user-email" placeholder="Email">
                 </div>
-                <div class="service-form__input-unit">
-                    <label for="inn">ИНН организации</label>
-                    <input type="text" id="inn" placeholder="ИНН организации">
+
+                <div class="input-block">
+                    <div class="input-block__title">
+                        <label for="user-organization">Наименование организации</label>
+                    </div>
+                    <input type="text" id="user-organization" placeholder="Полное наименование организации">
                 </div>
-                <div class="service-form__input-unit">
-                    <label for="organization">Название организации</label>
-                    <input type="text" id="organization" placeholder="Название организации">
+
+                <div class="input-block">
+                    <div class="input-block__title">
+                        <label for="user-address">Адрес организации</label>
+                    </div>
+                    <input type="text" id="user-address" placeholder="Адрес организации">
                 </div>
-                <div class="service-form__input-unit">
-                    <label for="phone">Телефон</label>
-                    <input type="text" id="phone" placeholder="Телефон пользователя">
+
+                <div class="input-block">
+                    <div class="input-block__title">
+                        <label for="user-phone">Телефон</label>
+                    </div>
+                    <input type="text" id="user-phone" placeholder="Телефон">
                 </div>
-                <div class="service-form__input-unit">
-                    <label for="pass">Пароль</label>
-                    <input type="password" id="pass" placeholder="Пароль">
-                    <img src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
-/img/icons/show-pass.svg" alt="" class="show-pass">
+
+                <div class="input-block">
+                    <div class="input-block__title">
+                        <label for="user-password">Пароль</label>
+                    </div>
+                    <input type="password" id="user-password" placeholder="Пароль">
                 </div>
             </div>
 
-            <div class="service-form__btn service-form__btn-register">
-                <p>Регистрация</p>
+            <button id="registerBtn" class="blue-btn blue-btn_serv">Регистрация</button>
+            <a href="/" class="service-form__link">Авторизоваться</a>
+        </div>
+    </div>
+
+    <div class="fancy-box">
+        <div class="fancy-box__wrapper">
+            <div class="fanncy-message">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
+/img/sucess.svg" alt="">
+                <p>Регистрация прошла успешно</p>
             </div>
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
+/js/common.js"></script>
+    <script type="module" src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
+/js/login.js"></script>
     <script src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
-/js/main.js"></script>
+/vendor/inputmask/inputmask.min.js"></script>
+    <script>
+        let inputMask = new Inputmask("+7(999)-999-99-99");
+        let elem = document.querySelector('#user-phone');
+        inputMask.mask(elem);
+    </script>
 </body>
+
+
+
 </html><?php }} ?>

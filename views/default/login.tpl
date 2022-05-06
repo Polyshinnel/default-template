@@ -29,14 +29,26 @@
                         <label for="password">Пароль</label>
                         <a href="/?controller=Restore">Забыли пароль?</a>
                     </div>
-                    <input type="text" id="password" placeholder="Пароль">
-                    <img src="{$templateWebPath}/img/show.svg" alt="">
+                    <input type="password" id="password" placeholder="Пароль">
+                    <img id="show-pass" src="{$templateWebPath}/img/show.svg" alt="">
                 </div>
             </div>
 
-            <button class="blue-btn blue-btn_serv">Авторизоваться</button>
+            <button id="loginBtn" class="blue-btn blue-btn_serv">Авторизоваться</button>
             <a href="/?controller=Register" class="service-form__link">Регистрация</a>
         </div>
     </div>
+
+    <div class="fancy-box">
+        <div class="fancy-box__wrapper">
+            <div class="fanncy-message">
+                <img src="{$templateWebPath}/img/sucess.svg" alt="">
+                <p>Регистрация прошла успешно</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="{$templateWebPath}/js/common.js"></script>
+    <script type="module" src="{$templateWebPath}/js/login.js"></script>
 </body>
 </html>

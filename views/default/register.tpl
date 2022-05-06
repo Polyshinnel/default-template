@@ -22,7 +22,7 @@
                     <div class="input-block__title">
                         <label for="user-name">Ваше имя</label>
                     </div>
-                    <input type="text" id="user-name" placeholder="Ваше имя">
+                    <input type="text" id="user-name" placeholder="Ваше имя и фамилия">
                 </div>
 
                 <div class="input-block">
@@ -61,8 +61,30 @@
                 </div>
             </div>
 
-            <button class="blue-btn blue-btn_serv">Регистрация</button>
+            <button id="registerBtn" class="blue-btn blue-btn_serv">Регистрация</button>
+            <a href="/" class="service-form__link">Авторизоваться</a>
         </div>
     </div>
+
+    <div class="fancy-box">
+        <div class="fancy-box__wrapper">
+            <div class="fanncy-message">
+                <img src="{$templateWebPath}/img/sucess.svg" alt="">
+                <p>Регистрация прошла успешно</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="{$templateWebPath}/js/common.js"></script>
+    <script type="module" src="{$templateWebPath}/js/login.js"></script>
+    <script src="{$templateWebPath}/vendor/inputmask/inputmask.min.js"></script>
+    <script>
+        let inputMask = new Inputmask("+7(999)-999-99-99");
+        let elem = document.querySelector('#user-phone');
+        inputMask.mask(elem);
+    </script>
 </body>
+
+
+
 </html>

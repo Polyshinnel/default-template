@@ -105,3 +105,37 @@ function dateFormater($date,$format='eu'){
     }
     return $dateNew;
 }
+
+//Генератор кодов
+function generateCode($length){
+    $code = '';
+    for($i=0;$i<$length;$i++){
+        $code .= mt_rand(0,9);
+    }
+    return $code;
+}
+
+//Нормализация телефона
+function formatPhone($phone){
+    $phone = preg_replace("/[^0-9]/", '', $phone);
+    $phone = mb_substr($phone,1);
+    $phone = '+7'.$phone;
+    return $phone;
+}
+
+//Генератор токенов
+function gen_token() {
+	$token = sprintf(
+		'%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+		mt_rand(0, 0xffff),
+		mt_rand(0, 0xffff),
+		mt_rand(0, 0xffff),
+		mt_rand(0, 0x0fff) | 0x4000,
+		mt_rand(0, 0x3fff) | 0x8000,
+		mt_rand(0, 0xffff),
+		mt_rand(0, 0xffff),
+		mt_rand(0, 0xffff)
+	);
+ 
+	return $token;
+}
